@@ -234,6 +234,8 @@ const Encrypt = () => {
   const messagePercentage = image ? (message.length / maxMessageLength) * 100 : 0;
   const isOverCapacity = messagePercentage > 100;
 
+  // Helper function to safely use alpha with theme colors
+ 
   return (
     <Box sx={{ 
       width: '100%', 
@@ -437,7 +439,7 @@ const Encrypt = () => {
                     maxHeight: 300, 
                     objectFit: 'contain',
                     p: 2,
-                    backgroundColor: theme.palette.mode === 'dark' ? alpha(theme.palette.common.black, 0.5) : alpha(theme.palette.grey, 0.05)
+                    backgroundColor: theme.palette.mode === 'dark' ? alpha(theme.palette.common.black, 0.5) : alpha(theme.palette.grey[100], 0.05)
                   }}
                 />
                 <CardContent>

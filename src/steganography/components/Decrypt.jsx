@@ -370,7 +370,9 @@ const Decrypt = () => {
                     maxHeight: 300, 
                     objectFit: 'contain',
                     p: 2,
-                    backgroundColor: theme.palette.mode === 'dark' ? alpha(theme.palette.common.black, 0.5) : alpha(theme.palette.grey, 0.05)
+                    backgroundColor: theme.palette.mode === 'dark' 
+                      ? alpha(theme.palette.common.black, 0.5) 
+                      : alpha(theme.palette.grey[100], 0.05) // Fixed: changed theme.palette.grey to theme.palette.grey[100]
                   }}
                 />
                 <CardContent>
